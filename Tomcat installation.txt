@@ -1,0 +1,34 @@
+ 1  sudo yum update
+    2  sudo yum list | grep java-1.8
+    3  sudo yum install java-1.8.0-openjdk-devel.x86_64
+    6  cd /opt/
+    7  ls
+    8  sudo wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip
+    9  ls
+   10  sudo unzip apache-maven-3.6.0-bin.zip
+   11  sudo rm -rf apache-maven-3.6.0-bin.zip
+   12  ls
+   13  cd apache-maven-3.6.0
+   14  ls
+   15  cd bin/
+   16  ls
+   17  sudo vi ~/.bashrc
+   18  source ~/.bashrc
+   19  mvn --version
+   20  sudo yum install git
+   21  sudo git clone https://github.com/javahometech/my-app.git
+   22  ls
+   26  sudo chown -R ec2-user:ec2-user my-app/
+   27  ll
+   28  cd my-app/
+   29  mvn clean package
+   30  ls
+   31  cd target/
+   32  ls
+   33  mv myweb-0.0.5.war myweb.war
+   34  ls
+   35  vi ~/abc.pem
+   36  chmod 400 ~/abc.pem
+   37  ls
+   38  scp -i ~/abc.pem myweb.war ec2-user@13.232.229.139:/opt/tomcat8/webapps/
+ 
